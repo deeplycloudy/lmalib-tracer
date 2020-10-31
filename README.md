@@ -4,7 +4,8 @@ Support code for using LMA data in the TRACER field campaign
 ## Installation
 
 After cloning this repository, install with
-``` conda env create environment.yml
+```
+conda env create environment.yml
 conda activate lmatracer
 pip install -e .
 ```
