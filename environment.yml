@@ -1,0 +1,17 @@
+name: lmatracer
+channels:
+- conda-forge
+- defaults
+dependencies:
+- hdf5
+- netcdf4
+- numpy
+- pandas
+- pip
+- python=3.7
+- scipy
+- xarray
+- pyproj
+- scikit-learn
+- pip:
+  - git+https://github.com/deeplycloudy/xlma-python.git@cf-lma-format
