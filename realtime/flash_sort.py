@@ -156,10 +156,10 @@ grid_ds = create_regular_grid(grid_edge_ranges, grid_center_names)
 if latlon_grid:
     pass
 else:
-    houston_grid=xr.open_dataset('../test/sbu-radar-grids/houston_grid.nc')
     ctrx, ctry = np.meshgrid(grid_ds.grid_x, grid_ds.grid_y)
     hlon, hlat = trnsf_from_map.transform(ctrx, ctry)
-    if resolution_m==500.0:
+    if False:
+        houston_grid=xr.open_dataset('/data/Houston/realtime-tracer/lmalib-tracer/test/sbu-radar-grids/houston_grid.nc')
         # Confirm x,y as in the grid match lon lat
         try:
             assert np.allclose(hlon,houston_grid.lon.data)
